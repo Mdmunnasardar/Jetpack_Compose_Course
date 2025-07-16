@@ -11,37 +11,34 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.jetpackcomposecourse.fundamentalConcepts.Greeting
 import com.example.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
 
+// MainActivity is the entry point of an app — the first screen that launches when a user opens the app.
+// It's typically the main Activity class, and in Jetpack Compose apps,
+// it's where the Compose UI is initialized.
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            //this the package of this project in the theme
             JetpackComposeCourseTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+
+                Greeting()
+
+
+
+
+
+
+
+
+
+
                 }
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    JetpackComposeCourseTheme {
-        Greeting("Android")
-    }
-}
