@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.jetpackcomposecourse.corecomponent.PasswordTextFieldSample
 import com.example.jetpackcomposecourse.fundamentalConcepts.AccessStringResources
 import com.example.jetpackcomposecourse.fundamentalConcepts.Greeting
 import com.example.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
@@ -26,8 +27,8 @@ class MainActivity : ComponentActivity() {
             //this the package of this project in the theme
             JetpackComposeCourseTheme {
 
-                AccessStringResources()
-                
+                //AccessStringResources()
+                PasswordTextFieldSample()
 
 
                 }
@@ -37,8 +38,9 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showSystemUi = true)
 @Composable
-fun   AccessStringResources() {
-    AccessStringResources()
+fun   Preview() {
+    //AccessStringResources()
+    PasswordTextFieldSample()
 
 
 }
