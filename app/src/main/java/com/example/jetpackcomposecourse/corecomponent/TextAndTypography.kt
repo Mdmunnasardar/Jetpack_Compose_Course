@@ -23,6 +23,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -126,6 +127,28 @@ fun MovedText(){
     }
     }
 
+@Composable
+fun ScrollableText() {
+
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+
+    ) {
+
+        Text(
+            text = "hey this is Munna Sardar experimenting with the jetpack compose".repeat(50),
+            maxLines = 2,
+            fontSize = 50.sp,
+            overflow = TextOverflow.Ellipsis
+            //using overflow to make text ellipsis..like this this 50 words which
+            //is divided in two lines and after the word ellipsis like .....
+        )
+
+
+    }
+
+}
 @Preview(showSystemUi = true)
 @Composable
 
@@ -133,7 +156,8 @@ fun SimpleTextPreview() {
     //SimpleText()
     //MixDifferentTextColor()
     //HorizontalTextRow()
-    MovedText()
+    //MovedText()
+    ScrollableText()
 
 
 
