@@ -3,11 +3,17 @@ package com.example.jetpackcomposecourse.corecomponent
 import android.widget.Button
 import android.widget.Toast
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -50,9 +56,104 @@ fun FilledButtonSample() {
         }
     }
 }
+/// 2. Tonal Button
+// 🔘 TonalButton – Medium emphasis Material 3 button
+// • Uses a colored background (usually secondaryContainer)
+// • Draws less attention than Filled Button, more than Text or Outlined
+// • Ideal for secondary actions in a UI
+// • Automatically styled based on the MaterialTheme color scheme
+// • Requires material3 dependency
+
+@Composable
+fun TonalButtonSample() {
+    val context = LocalContext.current
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFFCFD8DC)) // Slightly different background for visual distinction
+            .padding(16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        FilledTonalButton( // Use FilledTonalButton composable
+            onClick = {
+                Toast.makeText(context, "Tonal Button Clicked", Toast.LENGTH_SHORT).show()
+            }
+        ) {
+            Text(text = "Tonal Button")
+        }
+    }
+}
+@Composable
+fun OutlinedButtonSample() {
+    val context = LocalContext.current
+    Box( // Container to center the button and provide a background.
+        modifier = Modifier
+            .fillMaxSize() // Box fills the whole screen.
+            .background(Color(0xFFECEFF1)) // Different background for visual distinction.
+            .padding(16.dp), // Padding inside the Box.
+        contentAlignment = Alignment.Center // Centers content (Button) in the Box.
+    ) {
+        OutlinedButton( // This is the Outlined Button.
+            onClick = {
+                Toast.makeText(context, "Outlined Button Clicked", Toast.LENGTH_SHORT).show()
+            }
+        ) {
+            Text(text = "Outlined Button")
+        }
+    }
+}
+@Composable
+fun ElevatedButtonSample() {
+    val context = LocalContext.current
+    Box( // Container to center the button and provide a background.
+        modifier = Modifier
+            .fillMaxSize() // Box fills the whole screen.
+            .background(Color(0xFFF5F5F5)) // A neutral background for the Box.
+            .padding(16.dp), // Padding inside the Box.
+        contentAlignment = Alignment.Center // Centers content (Button) in the Box.
+    ) {
+        ElevatedButton( // This is the ElevatedButton.
+            onClick = {
+                Toast.makeText(context, "Elevated Button Clicked", Toast.LENGTH_SHORT).show()
+            }
+            // You can customize elevation if needed, e.g.:
+            // elevation = ButtonDefaults.elevatedButtonElevation(defaultElevation = 8.dp, pressedElevation = 2.dp)
+        ) {
+            Text(text = "Elevated Button")
+        }
+    }
+}
+
+/// text button use for text click
+@Composable
+fun TextButtonSample() {
+    val context = LocalContext.current
+    Box( // Container to center the button and provide a background.
+        modifier = Modifier
+            .fillMaxSize() // Box fills the whole screen.
+            .background(Color(0xFFFAFAFA)) // A very light background for the Box.
+            .padding(16.dp), // Padding inside the Box.
+        contentAlignment = Alignment.Center // Centers content (Button) in the Box.
+    ) {
+        TextButton( // This is the TextButton.
+            onClick = {
+                Toast.makeText(context, "Text Button Clicked", Toast.LENGTH_SHORT).show()
+            }
+        ) {
+            Text(text = "Text Button")
+        }
+    }
+}
+
+
+
 @Preview(showSystemUi = true)
 @Composable
 fun FilledButtonSamplePreview(){
-    FilledButtonSample()
+    //FilledButtonSample()
+    //TonalButtonSample()
+    //OutlinedButtonSample()
+    //ElevatedButtonSample()
+    TextButtonSample()
 }
 
