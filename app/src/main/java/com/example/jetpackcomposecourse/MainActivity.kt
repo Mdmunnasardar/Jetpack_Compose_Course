@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposecourse.corecomponent.AnnotatedStringwithListenerSample
 import com.example.jetpackcomposecourse.corecomponent.FilledButtonSample
 import com.example.jetpackcomposecourse.corecomponent.PasswordTextFieldSample
+import com.example.jetpackcomposecourse.corecomponent.TextButtonSample
 import com.example.jetpackcomposecourse.corecomponent.TonalButtonSample
 import com.example.jetpackcomposecourse.fundamentalConcepts.AccessStringResources
 import com.example.jetpackcomposecourse.fundamentalConcepts.Greeting
@@ -40,7 +41,8 @@ class MainActivity : ComponentActivity() {
                 //PasswordTextFieldSample()
                 //AnnotatedStringwithListenerSample()
                 //FilledButtonSample()
-                TonalButtonSample()
+                //TonalButtonSample()
+                TextButtonSample()
 
             }
             }
