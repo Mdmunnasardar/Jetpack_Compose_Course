@@ -24,6 +24,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 // 1. Column, it allows you to place its children in a vertical sequence.
 
 
+
+
 @Composable
 fun ColoumExample() {
 
@@ -93,17 +95,18 @@ fun ConstraintLayoutExample() {
     Column {
         ConstraintLayout(
             modifier = Modifier.fillMaxWidth()
-                .height(100.dp)
+                .height(120.dp)
                 .background(color = Color.LightGray)
         ) {
 
 
-            val (text1, text2, text3) = createRefs()
-
+            val (text1, text2, text3) = createRefs()//to take 3 text from the parent
+            // and the create reference means to depend is other like one text depend another
             Text("Bottom Left",
                 modifier = Modifier.constrainAs(text1){
-                    bottom.linkTo(parent.bottom, margin = 8.dp)
-                    start.linkTo(parent.start, margin = 8.dp)
+                    bottom.linkTo(parent.bottom, margin = 20.dp)
+                    // to link the text to the parent bottom
+                    start.linkTo(parent.start, margin = 20.dp)
                 }
 
             )
@@ -144,5 +147,7 @@ fun ColoumPreview() {
     //ColoumExample()
     //RowExample()
     //BoxExample()
+    ConstraintLayoutExample()
+
 
 }
