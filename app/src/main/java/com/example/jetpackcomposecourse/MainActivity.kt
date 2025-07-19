@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposecourse.bottomsheet.PartialBottomSheet
 import com.example.jetpackcomposecourse.corecomponent.AnnotatedStringwithListenerSample
 import com.example.jetpackcomposecourse.corecomponent.FilledButtonSample
 import com.example.jetpackcomposecourse.corecomponent.PasswordTextFieldSample
@@ -42,7 +43,8 @@ class MainActivity : ComponentActivity() {
                 //AnnotatedStringwithListenerSample()
                 //FilledButtonSample()
                 //TonalButtonSample()
-                TextButtonSample()
+                //TextButtonSample()
+                PartialBottomSheet()
 
             }
             }
