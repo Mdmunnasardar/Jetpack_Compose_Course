@@ -20,63 +20,62 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-@OptIn(ExperimentalMaterial3Api::class)
+// Demonstrates a ModalBottomSheet supporting partial expansion.
+@OptIn(ExperimentalMaterial3Api::class) // For ModalBottomSheet API.
 @Composable
 fun PartialBottomSheet() {
 
-
+    // State to control bottom sheet visibility.
     var showBottomSheet by remember {
         mutableStateOf(false)
     }
 
+    // State for the bottom sheet (expanded, partially expanded, hidden).
+    // `skipPartiallyExpanded = false` enables the partially open state.
     var sheetState = rememberModalBottomSheetState(
         skipPartiallyExpanded = false
     )
 
+    // Column to center the button.
     Column(
-
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
 
+        // Button to show the bottom sheet.
         Button(
             onClick = {
                 showBottomSheet = true
             }
         ) {
-
             Text(text = "Open Bottom Sheet")
-
         }
 
+        // Conditionally show ModalBottomSheet.
         if (showBottomSheet) {
 
             ModalBottomSheet(
-                modifier = Modifier.fillMaxHeight(),
-                sheetState = sheetState,
-                onDismissRequest = {
+                modifier = Modifier.fillMaxHeight(), // Sheet can fill height.
+                sheetState = sheetState,             // Links to sheet's positional state.
+                onDismissRequest = {                 // Handles dismissal (swipe/scrim tap).
                     showBottomSheet = false
                 }
             ) {
-
+                // Content inside the bottom sheet.
                 Text(
                     text = "This is the bottom sheet, swipe up for the open and down for close",
                     modifier = Modifier.padding(16.dp)
-
                 )
             }
         }
-
     }
-
 }
 
-
+// Previews the PartialBottomSheet.
 @Preview(showSystemUi = true)
 @Composable
 fun BottomExamplePreview() {
-
     PartialBottomSheet()
-
 }
+
