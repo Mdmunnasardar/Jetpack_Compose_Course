@@ -46,3 +46,6 @@ fun ExamplePreview() {
 }
 
 // also check the next Large and small floating button
+//Create new item: In a note-taking app, a FAB might be used to quickly create a new note.
+//Add new contact: In a chat app, a FAB could open an interface that lets the user add someone to a conversation.
+//Center location: In a map interface, a FAB could center the map on the user's current location.
