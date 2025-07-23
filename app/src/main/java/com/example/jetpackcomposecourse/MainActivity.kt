@@ -23,6 +23,7 @@ import com.example.jetpackcomposecourse.corecomponent.FilledButtonSample
 import com.example.jetpackcomposecourse.corecomponent.PasswordTextFieldSample
 import com.example.jetpackcomposecourse.corecomponent.TextButtonSample
 import com.example.jetpackcomposecourse.corecomponent.TonalButtonSample
+import com.example.jetpackcomposecourse.datepicker.DatePickerEx
 import com.example.jetpackcomposecourse.fundamentalConcepts.AccessStringResources
 import com.example.jetpackcomposecourse.fundamentalConcepts.Greeting
 import com.example.jetpackcomposecourse.timepicker.TimePickerEx
@@ -46,7 +47,8 @@ class MainActivity : ComponentActivity() {
                 //TonalButtonSample()
                 //TextButtonSample()
                 //PartialBottomSheet()
-                TimePickerEx()
+                //TimePickerEx()
+                DatePickerEx()
 
             }
             }
