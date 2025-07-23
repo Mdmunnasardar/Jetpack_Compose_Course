@@ -25,6 +25,7 @@ import com.example.jetpackcomposecourse.corecomponent.TextButtonSample
 import com.example.jetpackcomposecourse.corecomponent.TonalButtonSample
 import com.example.jetpackcomposecourse.fundamentalConcepts.AccessStringResources
 import com.example.jetpackcomposecourse.fundamentalConcepts.Greeting
+import com.example.jetpackcomposecourse.timepicker.TimePickerEx
 import com.example.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
 
 // MainActivity is the entry point of an app — the first screen that launches when a user opens the app.
@@ -44,7 +45,8 @@ class MainActivity : ComponentActivity() {
                 //FilledButtonSample()
                 //TonalButtonSample()
                 //TextButtonSample()
-                PartialBottomSheet()
+                //PartialBottomSheet()
+                TimePickerEx()
 
             }
             }
