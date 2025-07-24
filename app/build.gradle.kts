@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    kotlin("plugin.serialization") version "2.0.0"
+
 }
 
 android {
@@ -63,11 +63,23 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended-android:1.7.8")
 
     //for navigation component
-    implementation("androidx.navigation:navigation-ui:2.9.2")
-    // serialization for navigation component
+    //implementation("com.compose.compose-animated-navigationbar:bottombar:1.01") // Or the correct coordinates for your chosen library
+
+// Check for the latest STABLE version of Navigation Compose
+    implementation("androidx.navigation:navigation-compose:2.7.7") // Example: Replace with actual latest stable
+
+// Serialization for navigation component (check for latest compatible version)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
-    //Bottom Navigation Bar in Android
-    implementation("com.compas.compose-animated-navigationbar:bottombar:1.01")
+
+
+// Bottom Navigation Bar in Android (if using the third-party library and typo is fixed)
+    //implementation("com.compose.compose-animated-navigationbar:bottombar:1.01")
+
+    implementation("androidx.compose.material3:material3:1.2.0")
+// or newer
+    //implementation("com.compose.compose-animated-navigationbar:bottombar:1.01")
+   //implementation("androidx.compose.material3:material3")
        // implementation("libs.androidx.compose.material3") // Or "androidx.compose.material3:material3:VERSION"
         // ... other dependencies
+    //implementation("com.github.User:Repo:Tag")
 }
