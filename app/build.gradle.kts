@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "2.0.0"
 }
 
 android {
@@ -60,4 +61,13 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
     implementation("androidx.compose.material:material-icons-extended-android:1.7.8")
+
+    //for navigation component
+    implementation("androidx.navigation:navigation-ui:2.9.2")
+    // serialization for navigation component
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    //Bottom Navigation Bar in Android
+    implementation("com.compas.compose-animated-navigationbar:bottombar:1.01")
+       // implementation("libs.androidx.compose.material3") // Or "androidx.compose.material3:material3:VERSION"
+        // ... other dependencies
 }
