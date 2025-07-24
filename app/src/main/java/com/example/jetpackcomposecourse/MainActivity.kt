@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposecourse.bottomsheet.PartialBottomSheet
+import com.example.jetpackcomposecourse.buttomnevigation.StandardBottomNavigationBar
 import com.example.jetpackcomposecourse.corecomponent.AnnotatedStringwithListenerSample
 import com.example.jetpackcomposecourse.corecomponent.FilledButtonSample
 import com.example.jetpackcomposecourse.corecomponent.PasswordTextFieldSample
@@ -27,6 +28,7 @@ import com.example.jetpackcomposecourse.datepicker.DatePickerEx
 import com.example.jetpackcomposecourse.fundamentalConcepts.AccessStringResources
 import com.example.jetpackcomposecourse.fundamentalConcepts.Greeting
 import com.example.jetpackcomposecourse.timepicker.TimePickerEx
+import com.example.jetpackcomposecourse.topbar.TopAppBar
 import com.example.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
 
 // MainActivity is the entry point of an app — the first screen that launches when a user opens the app.
@@ -48,7 +50,9 @@ class MainActivity : ComponentActivity() {
                 //TextButtonSample()
                 //PartialBottomSheet()
                 //TimePickerEx()
-                DatePickerEx()
+                //DatePickerEx()
+                //StandardBottomNavigationBar()
+                TopAppBar()
 
             }
             }
