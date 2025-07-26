@@ -2,9 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    kotlin("plugin.serialization") version "2.0.0"
+    // Use this serialization plugin format:
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22"
 }
-
 android {
     namespace = "com.example.jetpackcomposecourse"
     compileSdk = 36
@@ -39,9 +39,7 @@ android {
         compose = true
     }
 }
-
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -50,7 +48,6 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -58,16 +55,18 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Navigation Compose (correct one)
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    // Constraint Layout
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
+    // Material Icons
     implementation("androidx.compose.material:material-icons-extended-android:1.7.8")
 
-    //for navigation component
-    implementation("androidx.navigation:navigation-ui:2.9.2")
-    // serialization for navigation component
+    // Kotlin Serialization (only needed if you're using serializable routes)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
-    //Bottom Navigation Bar in Android
-    implementation("com.compas.compose-animated-navigationbar:bottombar:1.01")
-       // implementation("libs.androidx.compose.material3") // Or "androidx.compose.material3:material3:VERSION"
-        // ... other dependencies
+    //implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.4")
 }

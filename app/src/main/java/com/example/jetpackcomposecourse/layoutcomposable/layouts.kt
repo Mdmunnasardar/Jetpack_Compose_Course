@@ -18,7 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintLayout
+
 
 //three layouts
 // 1. Column, it allows you to place its children in a vertical sequence.
